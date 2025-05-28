@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="atv01.css" />
+    <title>Exercícios</title>
+  </head>
+  <body>
+    <center>
+      <h1>Formulário de inscrição para o BBB</h1>
+      <form action="atv01.html">
+        <fieldset>
+          <label for="nome">Nome: </label>
+          <input type="text" id="nome" />
+          <br />
+          <label for="idade">Idade: </label>
+          <input type="number" id="idade" min="15" max="60" />
+          <br />
+          <label for="email">E-mail: </label>
+          <input type="email" id="email" />
+        </fieldset>
+        <br />
+        <fieldset>
+          <label for="nascimento">Data de Nascimento</label>
+          <br />
+          <input type="date" id="nascimento" />
+          <br />
+          <label for="Hora atual">Horário Atual</label>
+          <br />
+          <input type="time" id="horas" />
+        </fieldset>
+        <br />
+        <fieldset>
+          <label for="area">Áreas:</label>
+          <br />
+          <label for="area">Exatas</label>
+          <input type="checkbox" id="area" value="exatas" />
+          <br />
+          <label for="area">Humanas</label>
+          <input type="checkbox" id="area" value="humanas" />
+          <br />
+          <label for="area">Naturezas</label>
+          <input type="checkbox" id="area" value="naturezas" />
+        </fieldset>
+        <br />
+        <fieldset>
+          <label for="district">Bairro: </label>
+          <select name="bairro" id="district">
+            <option value="Brooklyn">Brooklyn</option>
+            <option value="Manhattan">Manhattan</option>
+            <option value="Staten Island">Staten Island</option>
+          </select>
+        </fieldset>
+        <br />
+        <fieldset>
+          <label>Deseja participar do BBB?</label>
+          <br />
+          <input type="radio" id="yes" name="bbb" value="Sim" />
+          <label for="yes">Sim</label>
+          <br />
+          <input type="radio" id="no" name="bbb" value="Não" />
+          <label for="no">Não</label>
+        </fieldset>
+        <br />
+        <fieldset>
+          <input type="submit" value="Enviar" id="button" />
+        </fieldset>
+      </form>
+    </center>
+  </body>
+</html>
