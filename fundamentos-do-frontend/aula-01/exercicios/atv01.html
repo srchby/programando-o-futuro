@@ -1,20 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercícios</title>
-</head>
-<body>
-    <input type="text" id="nome">
-    <input type="number" id="idade" min="15" max="60">
-    <input type="email" id="email">
-    
-    <input type="date" id="nascimento">
-    <input type="time" id="horas">
-
-    <input type="checkbox" id="area" value="exatas">
-    <input type="checkbox" id="area" value="humanas">
-    <input type="checkbox" id="area" value="naturezas">
-</body>
+  </head>
+  <body>
+    <form action="atv01.html">
+      <fieldset>
+        <label for="nome">Nome: </label>
+        <input type="text" id="nome" />
+        <br />
+        <label for="idade">Idade: </label>
+        <input type="number" id="idade" min="15" max="60" />
+        <br />
+        <label for="email">E-mail: </label>
+        <input type="email" id="email" />
+      </fieldset>
+      <br />
+      <fieldset>
+        <label for="nascimento">Data de Nascimento</label>
+        <br>
+        <input type="date" id="nascimento" />
+        <br />
+        <label for="Hora atual">Horário Atual</label>
+        <br>
+        <input type="time" id="horas" />
+      </fieldset>
+      <br />
+      <fieldset>
+        <label for="area">Áreas:</label>
+        <br />
+        <label for="area">Exatas</label>
+        <input type="checkbox" id="area" value="exatas" />
+        <br />
+        <label for="area">Humanas</label>
+        <input type="checkbox" id="area" value="humanas" />
+        <br />
+        <label for="area">Naturezas</label>
+        <input type="checkbox" id="area" value="naturezas" />
+      </fieldset>
+      <br />
+      <fieldset>
+        <label for="district">Bairro: </label>
+        <select name="bairro" id="district">
+          <option value="Brooklyn">Brooklyn</option>
+          <option value="Manhattan">Manhattan</option>
+          <option value="Staten Island">Staten Island</option>
+        </select>
+      </fieldset>
+      <br />
+      <fieldset>
+        <label>Deseja participar do BBB?</label>
+        <label for="yes">Sim</label>
+        <input type="radio" id="yes" name="bbyes" value="Sim" />
+        <br />
+        <label for="no">Não</label>
+        <input type="radio" id="no" name="bbno" value="Não" />
+      </fieldset>
+      <br />
+      <fieldset>
+        <input type="submit" value="Enviar" />
+      </fieldset>
+    </form>
+  </body>
 </html>
