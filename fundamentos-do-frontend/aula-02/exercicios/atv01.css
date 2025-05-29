@@ -42,10 +42,31 @@ input {
 }
 
 #button {
-    color: #070606;
-    border-radius: 1rem;
-    background-color: #ff6002;
+    color: #FFF;
+    background-color: #000;
     border: none;
+    border-radius: 1rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+#button:hover::before {
+    color: #FFF;
+    background-color: #000;
+    border-radius: 1rem;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+
+#button:hover {
+    color: #000;
+    background-color: #ff6002;
+    border: #000 1px solid;
+    border-radius: 1rem;
     text-align: center;
     text-decoration: none;
     padding: 10px 20px;
