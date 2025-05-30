@@ -1,27 +1,27 @@
-let age = prompt("Insira sua idade: ");
-let day = prompt("É quarta-feira (S/N)?");
+let age = prompt("Insira sua idade: ").trim();
+let day = prompt("É quarta-feira (S/N)?").toLowerCase().trim();
 
 const child = 10;
 const adult = 20;
 const senior = 12;
 
-switch (day.toLowerCase().trim()) {
+switch (day) {
   case "s":
-    if (parseInt(age) <= 12) {
+    if (age <= 12) {
       alert("O ingresso custará " + child / 2);
-    } else if (parseInt(age) <= 59) {
+    } else if (age <= 59) {
       alert("O ingresso custará " + adult / 2);
-    } else if (parseInt(age) >= 60) {
+    } else if (age >= 60) {
       alert("O ingresso custará " + senior / 2);
     } else {
       alert("Idade inválida");
     }
   case "n":
-    if (parseInt(age) <= 12) {
+    if (age <= 12) {
       alert("O ingresso custará " + child);
-    } else if (parseInt(age) <= 59) {
+    } else if (age <= 59) {
       alert("O ingresso custará " + adult);
-    } else if (parseInt(age) >= 60) {
+    } else if (age >= 60) {
       alert("O ingresso custará " + senior);
     } else {
       alert("Idade inválida");
