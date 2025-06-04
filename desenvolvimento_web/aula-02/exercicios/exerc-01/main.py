@@ -17,7 +17,7 @@ class Eletronic(Product):
         self.maker = maker
     
     def exibir_detalhes(self):
-        return f"Roupa: {self.name} do fabricanter {self.maker} por R${self.price}"
+        return f"Eletrônico: {self.name} do fabricanter {self.maker} por R${self.price}"
     
 class Clothing(Product):
     def __init__(self, name, price, brand):
