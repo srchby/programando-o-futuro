@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css') }}">
+    <title>Catalógo</title>
+  </head>
+  <body>
+    <div class="submit-form">
+        <h1>Registrar Item</h1>
+        <form method="post" class="form">
+            <label for="name">Nome</label><br />
+            <input type="text" id="name" name="name" required/><br />
+            
+            <label for="price">Preço</label><br />
+            <input type="number" id="price" name="price" required/><br />
+            
+            <label for="description" id="description">Descrição</label><br />
+            <textarea name="description" id="description" required></textarea><br />
+            
+            <button type="submit">Enviar</button><br />
+        </form>
+    </div>
+
+    <div class="products">        
+        <h1>Produtos</h1>
+        {% if products %}
+        <ul>
+            {% for p in products %}
+            <li>
+        <p >{{ p.name }}</p>
+        <p>{{ p.price }}</p>
+        <p>{{ p.description }}</p>
+    </li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>Nenhuma tarefa.</p>
+    {% endif %}
+</div>
+  </body>
+</html>

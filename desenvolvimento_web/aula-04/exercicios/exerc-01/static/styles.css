@@ -1,0 +1,30 @@
+* {
+  margin: auto;
+  padding: auto;
+}
+
+body {
+  background-color: grey;
+}
+
+.submit-form {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: fit-content;
+  border-radius: 1rem;
+  padding: 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.products {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: fit-content;
+  border-radius: 1rem;
+  padding: 25px;
+}
