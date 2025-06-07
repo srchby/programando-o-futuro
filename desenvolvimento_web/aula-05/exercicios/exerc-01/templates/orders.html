@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'styles.css') }}"
+    />
+    <title>Pedidos</title>
+  </head>
+  <body>
+    <div class="header">
+      <a href="/">Voltar</a>
+      <a href="/new">Criar cliente</a>
+    </div>
+    <div id="view-orders" class="container">
+      <h1>Clientes e Pedidos</h1>
+      {% for client in clients %}
+      <h3>Cliente</h3>
+      <strong>
+        <p>Nome: {{ client.name }}</p>
+        <p>E-mail: {{ client.email }}</p>
+      </strong>
+      <h3>Pedidos</h3>
+      {% for order in client.orders %}
+      <p>Preço: {{ order.price }}</p>
+      <p>Data: {{ order.date }}</p>
+      {% endfor %} {% endfor %}
+    </div>
+  </body>
+</html>

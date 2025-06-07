@@ -1,16 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
-</head>
-<body>
-    <a href="/new">Criar Cliente</a>
-    {% for c in clients %}
-    <p> E-mail: {{ c.email }}</p>
-    <p> Nome: {{ c.name }}</p>
-    <p> Telefone: {{ c.phone }}</p>
-    {% endfor %}
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'styles.css') }}"
+    />
+    <title>Inicio</title>
+  </head>
+  <body>
+    <div class="header">
+      <a href="/new">Criar Cliente</a><br />
+      <a href="/orders">Pedidos</a><br />
+    </div>
+    <button onclick="showEdit()" class="button">Editar</button>
+    <div id="show-clients" class="container">
+      <h1>Clientes</h1>
+      {% for client in clients %}
+      <p>{{ client.email }}</p>
+      <p>{{ client.name }}</p>
+      <p>{{ client.phone if client.phone is not none else ''}}</p>
+      <br />
+      {% endfor %}
+    </div>
+    <div id="edit-clients" class="container">
+      <h1>Clientes</h1>
+      {% for client in clients %}
+      <form method="POST" action="/update">
+        <input type="hidden" name="oldemail" value="{{ client.email }}" />
+        <p>
+          E-mail:
+          <input type="text" name="newemail" value="{{ client.email }}" class="text-field"/>
+        </p>
+        <p>
+          Nome: <input type="text" name="newname" value="{{ client.name }}" class="text-field"/>
+        </p>
+        <p>
+          Telefone:
+          <input type="text" name="newphone" value="{{ client.phone }}" class="text-field"/>
+        </p>
+        <input type="submit" value="Atualizar " class="button" />
+      </form>
+      <form method="POST" action="/delete">
+        <input
+          type="hidden"
+          name="email"
+          value="{{ client.email }}"
+          class="button"
+        />
+        <input type="submit" value="Apagar" class="button" />
+      </form>
+      <br />
+      {% endfor %}
+    </div>
+    <script>
+      function showEdit() {
+        edit = document.getElementById("edit-clients");
+        show = document.getElementById("show-clients");
+        if (edit.style.display === "none") {
+          edit.style.display = "block";
+          show.style.display = "none";
+        } else {
+          edit.style.display = "none";
+          show.style.display = "block";
+        }
+      }
+    </script>
+  </body>
 </html>

@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  margin: 10px;
+  color: black;
+  font-weight: bold;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+input,
+p {
+  margin: 10px;
+}
+
+.button {
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  border-radius: 0.25rem;
+  border: 1px solid black;
+  margin: 10px;
+  transition: background-color 0.1s;
+  transition: color 0.1s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+  padding: 15px;
+  width: 100%;
+  border-bottom: black 2px solid;
+}
+
+.container {
+  padding: 25px;
+  background-color: white;
+  border-radius: 0.25rem;
+  border: 1px solid black;
+}
+
+.text-field {
+  padding: 10px;
+  border: 1px black solid;
+  border-radius: 0.25rem;
+}
+
+.class-order {
+  padding: 25px;
+  background-color: white;
+  border-radius: 0.25rem;
+  border: 1px solid black;  
+}
+
+#edit-clients {
+  display: none;
+  padding: 25px;
+  background-color: white;
+  border-radius: 0.25rem;
+  border: 1px solid black;
+}
+
+#show-clients {
+  display: block;
+  padding: 25px;
+  background-color: white;
+  border-radius: 0.25rem;
+  border: 1px solid black;
+}

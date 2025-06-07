@@ -3,22 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forms</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'styles.css') }}"
+    />
+    <title>Formulário</title>
   </head>
   <body>
-    <a href="/">Voltar</a>
-    <form method="POST">
-      <label for="email">E-mail: </label><br>
-      <input type="text" name="email" id="email" /><br />
-      <label for="name">Nome: </label><br>
-      <input type="text" name="name" id="name" /><br />
-      <label for="Phone">Telefone: </label><br>
-      <input type="text" name="phone" id="phone" /><br />
-      <button type="submit">Enviar</button>
-    </form>
-    <button onclick="">Editar</button>
-    <button onclick="">Apagar</button>
-    <script>
-    </script>
+    <div class="header">
+      <a href="/">Voltar</a>
+      <a href="/orders">Pedidos</a>
+    </div>
+    <div class="container">
+      <form method="POST">
+        <label for="email">E-mail: </label><br />
+        <input type="text" name="email" id="email" class="text-field"/><br />
+        <label for="name">Nome: </label><br />
+        <input type="text" name="name" id="name" class="text-field"/><br />
+        <label for="Phone">Telefone: </label><br />
+        <input type="text" name="phone" id="phone" class="text-field"/><br />
+        <button type="submit" class="button">Enviar</button>
+      </form>
+    </div>
   </body>
 </html>
