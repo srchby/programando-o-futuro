@@ -3,41 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'styles.css') }}"
+    />
     <title>Catalógo</title>
   </head>
   <body>
     <div class="submit-form">
-        <h1>Registrar Item</h1>
-        <form method="post" class="form">
-            <label for="name">Nome</label><br />
-            <input type="text" id="name" name="name" required/><br />
-            
-            <label for="price">Preço</label><br />
-            <input type="number" id="price" name="price" required/><br />
-            
-            <label for="description" id="description">Descrição</label><br />
-            <textarea name="description" id="description" required></textarea><br />
-            
-            <button type="submit">Enviar</button><br />
-        </form>
+      <h1>Registrar Item</h1>
+      <form method="post" action="/?add" class="form">
+        <label for="name">Nome</label><br />
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="price">Preço</label><br />
+        <input
+          type="number"
+          id="price"
+          name="price"
+          min="1"
+          step="1"
+          required
+        /><br />
+
+        <label for="description" id="description">Descrição</label><br />
+        <textarea name="description" id="description" required></textarea><br />
+
+        <button type="submit" class="submit-button">Enviar</button><br />
+      </form>
     </div>
 
-    <div class="products">        
-        <h1>Produtos</h1>
-        {% if products %}
-        <ul>
-            {% for p in products %}
-            <li>
-        <p >{{ p.name }}</p>
-        <p>{{ p.price }}</p>
-        <p>{{ p.description }}</p>
-    </li>
-    {% endfor %}
-    </ul>
-    {% else %}
-    <p>Nenhuma tarefa.</p>
-    {% endif %}
-</div>
+    <div class="products">
+      <h1>Produtos</h1>
+      {% if products %}
+        {% for p in products %}
+        <div class="product">
+          <h3>{{ p.name }}</h3>
+          <p><strong>Preço </strong><br> R${{ '%.2f'|format(p.price) }}</p>
+          <p><strong>Descrição </strong><br> {{ p.description }}</p>
+        </div>
+        {% endfor %}
+      {% else %}
+      <p>Nenhum produto.</p>
+      {% endif %}
+    </div>
   </body>
 </html>

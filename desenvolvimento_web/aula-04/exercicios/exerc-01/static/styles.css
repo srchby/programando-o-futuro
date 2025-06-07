@@ -1,30 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 * {
+  color: white;
+  font-family: "Inter";
   margin: auto;
   padding: auto;
+  border-radius: 0.25rem;
+}
+
+input,
+textarea {
+  margin: 5px;
+  padding: 5px;
+  background-color: rgb(70, 70, 70);
+  border: none;
+  resize: none;
+  transition: background-color 0.1s;
+  width: 250px;
+}
+
+input:hover,
+textarea:hover {
+  background-color: rgb(80, 80, 80);
 }
 
 body {
-  background-color: grey;
+  background-color: rgb(30, 30, 30);
+}
+
+h1,
+h3 {
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .submit-form {
-  display: block;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
+  min-width: 250px;
+  background-color: rgb(50, 50, 50);
   width: fit-content;
-  border-radius: 1rem;
   padding: 25px;
   margin-bottom: 25px;
   margin-top: 25px;
+}
+
+.submit-button {
+  display: block;
+  margin: 25px auto 0 auto;
+  margin-top: 25px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.1s;
+}
+
+.submit-button:hover {
+  background-color: black;
+  color: white;
 }
 
 .products {
   display: block;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: rgb(50, 50, 50);
   width: fit-content;
-  border-radius: 1rem;
   padding: 25px;
+}
+
+.product {
+  padding: 25px;
+  background-color: rgb(70, 70, 70);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
