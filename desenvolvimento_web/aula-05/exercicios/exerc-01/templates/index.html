@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body>
+    <a href="/new">Criar Cliente</a>
+    {% for c in clients %}
+    <p> E-mail: {{ c.email }}</p>
+    <p> Nome: {{ c.name }}</p>
+    <p> Telefone: {{ c.phone }}</p>
+    {% endfor %}
+</body>
+</html>
